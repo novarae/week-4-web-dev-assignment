@@ -1,0 +1,121 @@
+/* =============================
+   Base Styles
+============================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Flexbox for nav */
+  gap: 1rem;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   Flexbox Section
+============================= */
+.flex-section {
+  display: flex; /* Flex container */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.flex-section article {
+  flex: 1; /* Equal width */
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-section article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* =============================
+   Grid Section (Cards)
+============================= */
+.grid-section {
+  display: grid; /* Grid container */
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-item {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+}
+
+.grid-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+/* =============================
+   Footer
+============================= */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* =============================
+   Media Queries (Responsive)
+============================= */
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+  .flex-section {
+    flex-direction: column; /* Stack flex items vertically */
+  }
+
+  .grid-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column; /* Stack nav links */
+  }
+
+  .grid-section {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}
